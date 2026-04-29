@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Claims Jose Christoper - Cybersecurity Portfolio">
+    <title>Claims Jose Christoper | Cybersecurity Engineer</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .mouse-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.15) 0%, rgba(139, 92, 246, 0.05) 40%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            filter: blur(40px);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Abstract Background -->
+    <div class="background-effects" id="bg-effects">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="grid-overlay"></div>
+        <div class="mouse-glow"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar fade-in-down">
+        <div class="logo">
+            <span class="terminal-prompt">root@system:~#</span> Jose_Christoper
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://github.com/claimsjosechristoper" target="_blank" class="social-icon" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/claims-jose-christoper/" target="_blank" class="social-icon" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <button class="btn-primary">Connect</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero" id="about">
+        <div class="hero-content fade-in-up">
+            <div class="badge cyber-badge">
+                <span class="sparkle">🛡️</span> SOC Analyst & Threat Hunter
+            </div>
+            
+            <h1>
+                Securing the<br>
+                digital world.<br>
+                <span class="highlight">Proactively<span class="dot">.</span></span>
+            </h1>
+            
+            <div class="typing-wrapper">
+                <div class="typing-container magnetic-element">
+                    <span class="terminal-prompt">></span> <span id="typewriter"></span><span class="typing-cursor">|</span>
+                </div>
+            </div>
+            
+            <p class="subtitle">
+                <strong>Ethical Hacker |</strong> Committed Cybersecurity Engineering student with practical experience in network monitoring, penetration testing, and incident response.
+            </p>
+
+            <div class="hero-actions" style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <button class="btn-primary" style="background: rgba(0,255,136,0.1); border: 1px solid var(--accent-color); color: var(--accent-color);">View Resume</button>
+                <a href="https://github.com/claimsjosechristoper" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="background: transparent; border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.7rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center;">Github</a>
+            </div>
+        </div>
+
+        <div class="hero-visual fade-in-up delay-1">
+            <div class="mockup-window cyber-window">
+                <!-- Window Header -->
+                <div class="window-header">
+                    <div class="dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="toolbar">
+                        <span class="status-indicator safe">●</span> System Secure
+                    </div>
+                </div>
+
+                <!-- Window Body -->
+                <div class="window-body">
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <div class="menu-group">
+                            <h4>✦ Identity</h4>
+                            <ul>
+                                <li class="active">
+                                    <span class="icon">👤</span> Who I Am
+                                </li>
+                                <li><span class="icon">🎯</span> Goals</li>
+                                <li><span class="icon">🎓</span> Background</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Area -->
+                    <div class="main-workspace terminal-workspace" style="overflow-y: auto; padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem; color: #fff; font-size: 1.8rem;">Who I Am</h3>
+                        <p style="color: #a0a0a0; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">
+                            Committed Cybersecurity Engineering student with practical experience in network monitoring, penetration testing, and incident response. Experienced in working with tools such as Wireshark, Kali Linux, and Burp Suite, along with a strong background in Python scripting and vulnerability assessment.
+                        </p>
+                        <p style="color: #a0a0a0; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Certified by Cisco, Google, and HackerRank, with a keen interest in SOC operations, ethical hacking, and threat analysis. Interested in contributing to a security team and leveraging skills in real-world cybersecurity environments.
+                        </p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="card" style="padding: 1rem; text-align: center;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">🔍</div>
+                                <h5 style="font-size: 1rem;">Network Forensics</h5>
+                            </div>
+                            <div class="card" style="padding: 1rem; text-align: center;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">🛡️</div>
+                                <h5 style="font-size: 1rem;">Penetration Testing</h5>
+                            </div>
+                            <div class="card" style="padding: 1rem; text-align: center;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">🎯</div>
+                                <h5 style="font-size: 1rem;">Vulnerability Assess</h5>
+                            </div>
+                            <div class="card" style="padding: 1rem; text-align: center;">
+                                <div style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">⚡</div>
+                                <h5 style="font-size: 1rem;">Incident Response</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Education Section -->
+    <section id="education" class="section alt-bg reveal">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Academic Background</h2>
+            <div style="max-width: 800px; margin: 0 auto; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 2.5rem; display: flex; align-items: center; gap: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative; overflow: hidden;">
+                <div style="position: absolute; left: 0; top: 0; width: 4px; height: 100%; background-color: var(--accent-color);"></div>
+                <div style="width: 80px; height: 80px; border-radius: 8px; background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">🎓</div>
+                <div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff;">Bachelor of Engineering (B.E.)</h3>
+                    <p style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 1.1rem;">Computer Science & Engineering (Cybersecurity Specialization)</p>
+                    <p style="color: #a0a0a0; margin-bottom: 0.5rem; font-size: 1.05rem;">Sathyabama Institute of Science and Technology, Chennai</p>
+                    <div style="display: flex; gap: 1rem; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 1rem;">
+                        <span style="background: rgba(255,255,255,0.05); padding: 0.4rem 1rem; border-radius: 4px; color: #ccc;">2024 - Present (2nd Year)</span>
+                        <span style="background: rgba(0,255,136,0.1); color: var(--accent-color); padding: 0.4rem 1rem; border-radius: 4px; font-weight: 600; border: 1px solid rgba(0,255,136,0.2);">CGPA: 7.0/10.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Technical Arsenal</h2>
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                
+                <!-- Cybersecurity -->
+                <div class="skill-category reveal delay-1">
+                    <h3 style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-color);"><span style="color: #fff;">🛡️</span> Cybersecurity</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Penetration Testing</span>
+                        <span class="tag">Network Monitoring</span>
+                        <span class="tag">SIEM Tools (basic)</span>
+                        <span class="tag">OWASP Top 10</span>
+                        <span class="tag">Cryptography</span>
+                        <span class="tag">SOC Analysis</span>
+                    </div>
+                </div>
+                
+                <!-- Networking -->
+                <div class="skill-category reveal delay-2">
+                    <h3 style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-color);"><span style="color: #fff;">🌐</span> Networking</h3>
+                    <div class="skill-tags">
+                        <span class="tag">TCP/IP</span>
+                        <span class="tag">Firewalls</span>
+                        <span class="tag">DNS</span>
+                        <span class="tag">VPNs</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Tech -->
+                <div class="skill-category reveal delay-3">
+                    <h3 style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-color);"><span style="color: #fff;">🛠️</span> Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Wireshark</span>
+                        <span class="tag">Kali Linux</span>
+                        <span class="tag">Nmap</span>
+                        <span class="tag">Burp Suite</span>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category reveal delay-1">
+                    <h3 style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-color);"><span style="color: #fff;">💻</span> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag accent">Python</span>
+                        <span class="tag accent">C</span>
+                        <span class="tag accent">Bash (beginner)</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category reveal delay-2">
+                    <h3 style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-color);"><span style="color: #fff;">🤝</span> Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Critical Thinking</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Team Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section id="projects" class="section alt-bg reveal">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Project Gallery</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal delay-1">
+                    <div class="project-visual rf-bg">
+                        <div class="overlay-text">LIVE FEED</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">Python • RTL-SDR • DSP</div>
+                        <h3>RF Intrusion Detection System</h3>
+                        <p>Developed a real-time RF signal monitoring system using RTL-SDR to detect unauthorized RF transmissions. Implemented signal analysis and anomaly detection techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal delay-2">
+                    <div class="project-visual drone-bg">
+                        <div class="radar"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">Raspberry Pi • HackRF • GPS</div>
+                        <h3>Anti-Drone System</h3>
+                        <p>Built RF-based UAV detection using Raspberry Pi & HackRF with GPS geofencing and secure communication.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal delay-3">
+                    <div class="project-visual scanner-bg">
+                        <div class="code-snippet">await asyncio.gather(*tasks)</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">Python • Asyncio • Socket</div>
+                        <h3>Custom Port Scanner</h3>
+                        <p>Coded async Python scanner with fingerprinting & report generation; matched Nmap >95% accuracy.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal delay-1">
+                    <div class="project-visual" style="background: linear-gradient(135deg, #111, #0a192f);">
+                        <div class="code-snippet" style="color: #a855f7;">import socket</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">Python • Socket</div>
+                        <h3>Basic Port Scanner</h3>
+                        <p>Developed a Python script to scan for open ports on local and remote IP addresses using socket programming.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card reveal delay-2">
+                    <div class="project-visual rf-bg">
+                        <div class="overlay-text" style="color: #f59e0b; border-color: #f59e0b;">PACKET SNIFFING...</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">Wireshark • Networking</div>
+                        <h3>Wi-Fi Packet Sniffing</h3>
+                        <p>Captured and analyzed wireless network traffic to identify communication protocols and detect potential vulnerabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reveal delay-3">
+                    <div class="project-visual scanner-bg">
+                        <div class="code-snippet" style="color: #ec4899;">import research_data</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">Research • Testing • Docs</div>
+                        <h3>College Research Project</h3>
+                        <p>Assisted Professor on college research project — contributed to development, testing, and documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certs Section -->
+    <section id="certifications" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Credentials</h2>
+            
+            <div class="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                
+                <div class="cert-item reveal delay-1">
+                    <div class="cert-icon thm" style="background: #111; border: 2px solid #fff; color: #fff;">THM</div>
+                    <div class="cert-details">
+                        <h4>Cyber Security 101</h4>
+                        <p>TryHackMe • March 2026</p>
+                    </div>
+                </div>
+
+                <div class="cert-item reveal delay-2">
+                    <div class="cert-icon thm" style="background: #111; border: 2px solid #fff; color: #fff;">THM</div>
+                    <div class="cert-details">
+                        <h4>Pre Security Path</h4>
+                        <p>TryHackMe • September 2025</p>
+                    </div>
+                </div>
+
+                <div class="cert-item reveal delay-3">
+                    <div class="cert-icon" style="background: #1e3a8a; color: #fff; font-size: 0.8rem;">RFS</div>
+                    <div class="cert-details">
+                        <h4>Python For Data Science</h4>
+                        <p>RFskillingacademy • April 2025</p>
+                    </div>
+                </div>
+
+                <div class="cert-item reveal delay-1">
+                    <div class="cert-icon hr" style="background: #00EA64; color: #111;">HR</div>
+                    <div class="cert-details">
+                        <h4>Python (Basic)</h4>
+                        <p>HackerRank • February 2025</p>
+                    </div>
+                </div>
+
+                <div class="cert-item reveal delay-2">
+                    <div class="cert-icon" style="background: #0ea5e9; color: #fff; font-size: 0.8rem;">CISCO</div>
+                    <div class="cert-details">
+                        <h4>Introduction to Cybersecurity</h4>
+                        <p>Cisco Networking Academy • Feb 2025</p>
+                    </div>
+                </div>
+
+                <div class="cert-item reveal delay-3">
+                    <div class="cert-icon google" style="background: #4285F4; color: #fff;">G</div>
+                    <div class="cert-details">
+                        <h4>Foundations of Cybersecurity</h4>
+                        <p>Coursera (Google) • Dec 2024</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Claims Jose Christoper. Securing the perimeter.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
