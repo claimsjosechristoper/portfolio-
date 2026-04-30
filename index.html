@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
         .mouse-glow {
             position: fixed;
@@ -34,6 +37,40 @@
         <div class="glow-1"></div>
         <div class="glow-2"></div>
         <div class="grid-overlay"></div>
+
+        <!-- Grid Beams -->
+        <svg width="156" height="63" viewBox="0 0 156 63" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 15%; left: 5%; transform: scale(3); opacity: 0.9; pointer-events: none;">
+          <path d="M31 .5h32M0 .5h32m30 31h32m-1 0h32m-1 31h32M62.5 32V0m62 63V31" stroke="url(#grad1)" stroke-width="1.5"/>
+          <defs>
+            <linearGradient id="grad1">
+              <stop stop-color="#18CCFC" stop-opacity="0" />
+              <stop stop-color="#18CCFC" />
+              <stop offset="0.325" stop-color="#6344F5" />
+              <stop offset="1" stop-color="#AE48FF" stop-opacity="0" />
+              <animate attributeName="x1" values="40%; 0%; 0%" keyTimes="0; 0.47; 1" dur="3.8s" repeatCount="indefinite" />
+              <animate attributeName="y1" values="160%; -40%; -40%" keyTimes="0; 0.47; 1" dur="3.8s" repeatCount="indefinite" />
+              <animate attributeName="x2" values="50%; 10%; 10%" keyTimes="0; 0.47; 1" dur="3.8s" repeatCount="indefinite" />
+              <animate attributeName="y2" values="180%; -20%; -20%" keyTimes="0; 0.47; 1" dur="3.8s" repeatCount="indefinite" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <svg width="156" height="63" viewBox="0 0 156 63" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 60%; right: 10%; transform: scale(4) rotate(90deg); opacity: 0.7; pointer-events: none;">
+          <path d="M31 .5h32M0 .5h32m30 31h32m-1 0h32m-1 31h32M62.5 32V0m62 63V31" stroke="url(#grad2)" stroke-width="1.5"/>
+          <defs>
+            <linearGradient id="grad2">
+              <stop stop-color="#00ff88" stop-opacity="0" />
+              <stop stop-color="#00ff88" />
+              <stop offset="0.325" stop-color="#0ea5e9" />
+              <stop offset="1" stop-color="#3b82f6" stop-opacity="0" />
+              <animate attributeName="x1" values="40%; 0%; 0%" keyTimes="0; 0.47; 1" dur="4.2s" begin="1s" repeatCount="indefinite" />
+              <animate attributeName="y1" values="160%; -40%; -40%" keyTimes="0; 0.47; 1" dur="4.2s" begin="1s" repeatCount="indefinite" />
+              <animate attributeName="x2" values="50%; 10%; 10%" keyTimes="0; 0.47; 1" dur="4.2s" begin="1s" repeatCount="indefinite" />
+              <animate attributeName="y2" values="180%; -20%; -20%" keyTimes="0; 0.47; 1" dur="4.2s" begin="1s" repeatCount="indefinite" />
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div class="mouse-glow"></div>
     </div>
 
@@ -373,6 +410,8 @@
             </div>
         </div>
     </section>
+
+    <!-- End Main Content -->
 
     <footer class="footer">
         <p>© 2026 Claims Jose Christoper. Securing the perimeter.</p>
