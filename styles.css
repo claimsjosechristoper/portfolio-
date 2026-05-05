@@ -618,48 +618,187 @@ body {
 
 @media (max-width: 992px) {
     .navbar { flex-wrap: wrap; gap: 1rem; justify-content: center; padding: 1rem; }
-    .nav-links { display: none; } /* Hide links on tablet to save space, or use a hamburger menu */
+    .nav-links { display: none; }
+    .social-links { gap: 1rem; }
     
-    .hero { flex-direction: column; text-align: center; }
+    .hero { flex-direction: column; text-align: center; padding: 3rem 2rem 2rem; }
     .hero-content { display: flex; flex-direction: column; align-items: center; }
-    .hero-content h1 { font-size: 3.5rem; }
+    .hero-content h1 { font-size: 3.5rem; line-height: 1.2; }
+    .hero-visual { display: none; } /* Hide mockup on tablet for better UX */
     
-    .hero-actions { justify-content: center; }
+    .hero-actions { justify-content: center; gap: 1rem; }
     
     .window-body { flex-direction: column; height: auto; }
     .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border-color); display: flex; overflow-x: auto; padding: 0.5rem; }
     .menu-group { display: flex; align-items: center; gap: 1rem; }
-    .menu-group h4 { margin-bottom: 0; margin-right: 1rem; white-space: nowrap; }
-    .menu-group ul { display: flex; gap: 0.5rem; }
-    .menu-group li { margin-bottom: 0; white-space: nowrap; }
+    .menu-group h4 { margin-bottom: 0; margin-right: 1rem; white-space: nowrap; font-size: 0.9rem; }
+    .menu-group ul { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .menu-group li { margin-bottom: 0; font-size: 0.85rem; }
     
-    .terminal-workspace { padding: 1.5rem; }
+    .terminal-workspace { padding: 1.5rem; font-size: 0.95rem; }
+    .terminal-workspace h3 { font-size: 1.4rem; }
+    .terminal-workspace p { font-size: 0.95rem; }
+    
+    .section-title { font-size: 2rem; margin-bottom: 2rem; }
     
     /* Education section flex to column */
     .section .container > div[style*="display: flex"] { flex-direction: column; text-align: center; padding: 1.5rem !important; }
-    .section .container > div[style*="display: flex"] > div:first-child { display: none; } /* hide vertical line */
+    .section .container > div[style*="display: flex"] > div:first-child { display: none; }
     .section .container > div[style*="display: flex"] > div:last-child > div { flex-wrap: wrap; justify-content: center; }
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.8rem; }
-    .subtitle { font-size: 1rem; }
+    body { font-size: 15px; }
+    
+    .navbar { padding: 1rem 1rem; }
+    .logo { font-size: 1.1rem; }
+    .social-links { gap: 0.75rem; }
+    .social-icon svg { width: 18px; height: 18px; }
+    .btn-primary { padding: 0.5rem 1rem; font-size: 0.9rem; }
+    
+    .hero { padding: 2.5rem 1.5rem; min-height: auto; }
+    .hero-content h1 { font-size: 2.2rem; line-height: 1.3; margin-bottom: 1rem; }
+    .cyber-badge { font-size: 0.75rem; padding: 0.4rem 0.8rem; }
+    .subtitle { font-size: 0.95rem; max-width: 100%; }
+    
+    .section { padding: 3.5rem 1.5rem; }
+    .section-title { font-size: 1.8rem; margin-bottom: 1.5rem; }
     
     .skills-grid { grid-template-columns: 1fr; }
     .project-grid { grid-template-columns: 1fr; }
     .cert-grid { grid-template-columns: 1fr; }
     
+    .skill-category { padding: 1rem; }
+    .skill-category h3 { font-size: 1.1rem; }
+    .skill-tags { gap: 0.5rem; }
+    .tag { font-size: 0.8rem; padding: 0.35rem 0.7rem; }
+    
     .terminal-workspace > div[style*="display: grid"] { grid-template-columns: 1fr !important; }
     
-    .footer { padding: 2rem 1rem; }
+    .footer { padding: 2rem 1rem; font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
-    .logo { font-size: 1.2rem; }
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-actions { flex-direction: column; width: 100%; }
-    .hero-actions button, .hero-actions a { width: 100%; justify-content: center; text-align: center; }
+    html { font-size: 14px; }
     
-    .mockup-window { margin: 0 -1rem; border-radius: 0; border-left: none; border-right: none; }
+    .navbar { 
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo { 
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+        order: -1;
+    }
+    
+    .social-links { 
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .social-icon svg { width: 16px; height: 16px; }
+    .btn-primary { padding: 0.45rem 0.9rem; font-size: 0.85rem; }
+    
+    .hero { 
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+    
+    .hero-content h1 { 
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 0.8rem;
+    }
+    
+    .typing-container { font-size: 1rem; padding: 0.4rem 0.8rem; }
+    .subtitle { font-size: 0.9rem; margin-bottom: 1rem; }
+    
+    .hero-actions { 
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+    
+    .hero-actions button,
+    .hero-actions a { 
+        width: 100%;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .section { 
+        padding: 2.5rem 1rem;
+    }
+    
+    .section-title { 
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .container { 
+        padding: 0;
+    }
+    
+    .cyber-badge { 
+        font-size: 0.7rem;
+        padding: 0.35rem 0.7rem;
+    }
+    
+    .mockup-window { 
+        margin: 0 -1rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        height: 350px;
+    }
+    
+    .window-header { padding: 0.6rem 0.8rem; }
+    .sidebar { padding: 0.4rem; gap: 0; }
+    .menu-group h4 { font-size: 0.8rem; margin-right: 0.5rem; }
+    .menu-group ul { gap: 0.3rem; }
+    .menu-group li { font-size: 0.75rem; }
+    
+    .terminal-workspace { 
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .terminal-workspace h3 { font-size: 1.2rem; }
+    .terminal-workspace p { font-size: 0.85rem; line-height: 1.5; }
+    
+    .skill-category { 
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-category h3 { font-size: 1rem; }
+    .skill-tags { gap: 0.4rem; }
+    .tag { font-size: 0.75rem; padding: 0.3rem 0.6rem; }
+    
+    .project-card { margin-bottom: 0.5rem; }
+    .project-visual { min-height: 180px; }
+    .project-content { padding: 1rem; }
+    .project-content h3 { font-size: 1.1rem; }
+    .tech-stack { font-size: 0.75rem; }
+    
+    .cert-item { padding: 0.8rem; gap: 0.8rem; }
+    .cert-icon { 
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+    
+    .cert-details h4 { font-size: 0.95rem; }
+    .cert-details p { font-size: 0.8rem; }
+    
+    .footer { 
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
+    }
 }
 
