@@ -1,0 +1,38 @@
+# This file specifies files that should NOT be included in the container image
+# when deploying to Google Cloud Run.
+
+# Git files
+.git
+.gitignore
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if used)
+node_modules/
+npm-debug.log
+
+# Python (if used)
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Build artifacts
+dist/
+build/
+
+# Documentation
+README.md

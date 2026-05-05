@@ -1,0 +1,33 @@
+steps:
+  # Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/portfolio:latest'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/portfolio:$SHORT_SHA'
+      - '.'
+
+  # Push the image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/portfolio'
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/cloud-builders/run'
+    args:
+      - 'deploy'
+      - 'portfolio'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/portfolio:$SHORT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+
+images:
+  - 'gcr.io/$PROJECT_ID/portfolio:latest'
+  - 'gcr.io/$PROJECT_ID/portfolio:$SHORT_SHA'
