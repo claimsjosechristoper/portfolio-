@@ -17,18 +17,21 @@
         }
 
         body {
-            background-color: #f5f5f5;
-            color: #000;
-            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
         }
 
+        /* Navbar */
         .navbar {
             background: rgba(5, 5, 5, 0.95);
-            padding: 1.5rem 4rem;
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -36,106 +39,153 @@
 
         .navbar-title {
             color: #fff;
-            font-size: 1.2rem;
-            font-weight: bold;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
 
         .navbar-links a {
-            color: #fff;
+            color: #b0b0b0;
             text-decoration: none;
-            margin-left: 2rem;
             font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .navbar-links a:hover {
             color: #00ff88;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .navbar-links .download-btn {
+            background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+            color: #0a0a0a;
+            padding: 0.6rem 1.4rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
         }
 
+        .navbar-links .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Resume Content */
         #resume-content {
-            background: #fff;
+            background: rgba(20, 20, 30, 0.8);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            border-radius: 12px;
             padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
         }
 
         .resume-header {
             text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #ccc;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.2);
         }
 
         .resume-name {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #000;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
         }
 
         .resume-title {
             font-size: 1rem;
-            color: #333;
-            margin-bottom: 0.5rem;
+            color: #00ff88;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .resume-contact {
-            font-size: 0.9rem;
-            color: #0066cc;
+            font-size: 0.85rem;
+            color: #b0b0b0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .resume-contact a {
-            color: #0066cc;
+            color: #00ff88;
             text-decoration: none;
-            margin: 0 0.25rem;
+            transition: color 0.3s ease;
         }
 
         .resume-contact a:hover {
-            text-decoration: underline;
+            color: #00ff99;
         }
 
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 2.5rem;
+        }
+
+        /* Resume Section */
         .resume-section {
             margin-bottom: 2rem;
         }
 
         .resume-section-title {
-            font-size: 0.9rem;
-            font-weight: bold;
+            font-size: 0.85rem;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #000;
-            margin-bottom: 1rem;
+            letter-spacing: 0.15em;
+            color: #00ff88;
+            margin-bottom: 1.2rem;
             padding-bottom: 0.75rem;
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.3);
         }
 
         .resume-subsection {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.3rem;
         }
 
         .resume-subsection-title {
             font-size: 0.95rem;
-            font-weight: bold;
-            color: #000;
-            margin: 0 0 0.25rem 0;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 0.3rem 0;
         }
 
         .resume-subsection-subtitle {
             font-size: 0.85rem;
-            color: #555;
-            margin: 0.1rem 0 0.3rem 0;
+            color: #888;
+            margin: 0.2rem 0 0.4rem 0;
+            font-weight: 500;
         }
 
         .resume-text {
             font-size: 0.9rem;
             line-height: 1.6;
-            color: #333;
-            margin: 0.25rem 0;
+            color: #d0d0d0;
+            margin: 0.3rem 0;
+        }
+
+        .resume-text strong {
+            color: #fff;
         }
 
         .resume-list {
@@ -145,17 +195,13 @@
 
         .resume-list li {
             font-size: 0.9rem;
-            margin: 0.4rem 0;
-            color: #333;
+            margin: 0.5rem 0;
+            color: #d0d0d0;
             list-style: disc;
+            list-style-color: #00ff88;
         }
 
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1.4fr;
-            gap: 2rem;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
             .two-column {
                 grid-template-columns: 1fr;
@@ -168,16 +214,68 @@
             }
 
             .navbar-links {
-                display: flex;
-                gap: 1rem;
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
             }
 
-            .navbar-links a {
-                margin-left: 0;
+            .navbar-links a,
+            .navbar-links button {
+                width: 100%;
+                text-align: center;
             }
 
             #resume-content {
                 padding: 1.5rem;
+            }
+
+            .resume-name {
+                font-size: 1.8rem;
+            }
+
+            .resume-header {
+                margin-bottom: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            #resume-content {
+                background: white;
+                border: none;
+                box-shadow: none;
+                padding: 2rem;
+            }
+
+            .resume-name {
+                color: #000;
+            }
+
+            .resume-title {
+                color: #333;
+            }
+
+            .resume-section-title {
+                color: #000;
+            }
+
+            .resume-contact a,
+            .resume-contact {
+                color: #000;
+            }
+
+            .resume-text,
+            .resume-list li {
+                color: #000;
             }
         }
     </style>
@@ -185,525 +283,150 @@
 <body>
     <!-- Navigation -->
     <div class="navbar">
-        <div class="navbar-title">Resume</div>
+        <div class="navbar-title">Claims Jose Christoper</div>
         <div class="navbar-links">
             <a href="index.html">Back Home</a>
-            <a href="resume.pdf" download="Claims_Jose_Christoper_Resume.pdf">Download PDF</a>
+            <a href="resume.pdf" download="Claims_Jose_Christoper_Resume.pdf" class="download-btn" id="resume-download-btn">Download PDF</a>
         </div>
     </div>
 
     <!-- Main Container -->
     <div class="container">
         <div id="resume-content">
-            <div style="text-align: center; color: #888; padding: 2rem;">Loading resume...</div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const resumeContent = document.getElementById('resume-content');
+            <div class="resume-header">
+                <div class="resume-name">CLAIMS JOSE CHRISTOPER C</div>
+                <div class="resume-title">Cybersecurity Engineering Student | Penetration Tester | SOC Analyst (Aspiring)</div>
+                <div class="resume-contact">
+                    <a href="mailto:claimsjosechristoper@gmail.com">claimsjosechristoper@gmail.com</a> | 
+                    <a href="https://linkedin.com/in/claims-jose-christoper">linkedin.com/in/claims-jose-christoper</a> | 
+                    <a href="https://github.com/claimsjosechristoper">github.com/claimsjosechristoper</a>
+                </div>
+            </div>
             
-            fetch('resume.pdf')
-                .then(response => response.text())
-                .then(text => {
-                    // Create professional resume layout
-                    const html = `
-                        <div class="resume-header">
-                            <div class="resume-name">CLAIMS JOSE CHRISTOPER C</div>
-                            <div class="resume-title">Cybersecurity Engineering Student | Penetration Tester | SOC Analyst (Aspiring)</div>
-                            <div class="resume-contact">
-                                <a href="mailto:claimsjosechristoper@gmail.com">claimsjosechristoper@gmail.com</a> | 
-                                <a href="https://linkedin.com/in/claims-jose-christoper">linkedin.com/in/claims-jose-christoper</a> | 
-                                <a href="https://github.com/claimsjosechristoper">github.com/claimsjosechristoper</a>
-                            </div>
+            <div class="two-column">
+                <!-- LEFT COLUMN -->
+                <div>
+                    <!-- EDUCATION -->
+                    <div class="resume-section">
+                        <div class="resume-section-title">EDUCATION</div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">SATHYABAMA UNIVERSITY</div>
+                            <div class="resume-text">Bachelor of Engineering<br>Computer Science & Engineering<br>(Specialization: Cybersecurity)</div>
+                            <div class="resume-subsection-subtitle">2024 – Present (Currently 2nd Year)</div>
+                            <div class="resume-text">CGPA: 7.0 / 10<br>2024-2028</div>
+                        </div>
+                    </div>
+                    
+                    <!-- SKILLS -->
+                    <div class="resume-section">
+                        <div class="resume-section-title">SKILLS</div>
+                        <ul class="resume-list">
+                            <li>Penetration Testing</li>
+                            <li>SOC Analysis</li>
+                            <li>Packet Analysis</li>
+                            <li>Python (Intermediate)</li>
+                            <li>C Bash (Beginner)</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- CERTIFICATION -->
+                    <div class="resume-section">
+                        <div class="resume-section-title">CERTIFICATION</div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Cyber Security 101</div>
+                            <div class="resume-subsection-subtitle">TryHackMe 2026</div>
+                        </div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Pre Security Path</div>
+                            <div class="resume-subsection-subtitle">TryHackMe 2025</div>
+                        </div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Python For Data Science</div>
+                            <div class="resume-subsection-subtitle">RFskillingacademy 2025</div>
+                        </div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Python (Basic)</div>
+                            <div class="resume-subsection-subtitle">HackerRank 2025</div>
+                        </div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Introduction to Cybersecurity</div>
+                            <div class="resume-subsection-subtitle">Cisco Networking Academy 2025</div>
+                        </div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Foundations of Cybersecurity</div>
+                            <div class="resume-subsection-subtitle">Coursera (offered by Google) 2024</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RIGHT COLUMN -->
+                <div>
+                    <!-- PROFESSIONAL SUMMARY -->
+                    <div class="resume-section">
+                        <div class="resume-section-title">PROFESSIONAL SUMMARY</div>
+                        <div class="resume-text">Motivated Cybersecurity Engineering student (2nd year) with hands-on experience in RF signal analysis, network monitoring, penetration testing, and incident response. Proficient with Wireshark, Kali Linux, Burp Suite, and Python scripting. Certified by Cisco, Google, and TryHackMe. Actively building real-world security tools including an RF Intrusion Detection System and an Anti-Drone defense platform. Seeking to contribute to a dynamic SOC or security engineering team.</div>
+                    </div>
+                    
+                    <!-- PROJECT EXPERIENCE -->
+                    <div class="resume-section">
+                        <div class="resume-section-title">PROJECT EXPERIENCE</div>
+                        
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">RF Intrusion Detection System (RF IDS):</div>
+                            <div class="resume-text">Developed a real-time RF signal monitoring system using RTL-SDR to detect unauthorized RF transmissions. Implemented signal analysis and anomaly detection techniques for identifying suspicious activity. Focused on authentication validation and spectrum monitoring for security applications.</div>
                         </div>
                         
-                        <div class="two-column">
-                            <!-- LEFT COLUMN -->
-                            <div>
-                                <!-- EDUCATION -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">EDUCATION</div>
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">SATHYABAMA UNIVERSITY</div>
-                                        <div class="resume-text">Bachelor of Engineering<br>Computer Science & Engineering<br>(Specialization: Cybersecurity)</div>
-                                        <div class="resume-text"><strong>2024 – Present (Currently 2nd Year)</strong><br>CGPA: 7.0 / 10<br>2024-2028</div>
-                                    </div>
-                                </div>
-                                
-                                <!-- SKILLS -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">SKILLS</div>
-                                    <ul class="resume-list">
-                                        <li>Penetration Testing</li>
-                                        <li>SOC Analysis</li>
-                                        <li>Packet Analysis</li>
-                                        <li>Python (Intermediate)</li>
-                                        <li>C Bash (Beginner)</li>
-                                    </ul>
-                                </div>
-                                
-                                <!-- CERTIFICATION -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">CERTIFICATION</div>
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Cyber Security 101</div>
-                                        <div class="resume-subsection-subtitle">TryHackMe 2026</div>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Pre Security Path</div>
-                                        <div class="resume-subsection-subtitle">TryHackMe 2025</div>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Python For Data Science</div>
-                                        <div class="resume-subsection-subtitle">freeCodeCamp 2025</div>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Python (Basic)</div>
-                                        <div class="resume-subsection-subtitle">HackerRank 2025</div>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Introduction to Cybersecurity</div>
-                                        <div class="resume-subsection-subtitle">Cisco Networking Academy 2025</div>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Foundations of Cybersecurity</div>
-                                        <div class="resume-subsection-subtitle">Coursera (offered by Google) 2024</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- RIGHT COLUMN -->
-                            <div>
-                                <!-- PROFESSIONAL SUMMARY -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">PROFESSIONAL SUMMARY</div>
-                                    <div class="resume-text">Motivated Cybersecurity Engineering student (2nd year) with hands-on experience in RF signal analysis, network monitoring, penetration testing, and incident response. Proficient with Wireshark, Kali Linux, Burp Suite, and Python scripting. Certified by Cisco, Google, and TryHackMe. Actively building real-world security tools including an RF Intrusion Detection System and an Anti-Drone defense platform. Seeking to contribute to a dynamic SOC or security engineering team.</div>
-                                </div>
-                                
-                                <!-- PROJECT EXPERIENCE -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">PROJECT EXPERIENCE</div>
-                                    
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">RF Intrusion Detection System (RF IDS):</div>
-                                        <div class="resume-text">Developed a real-time RF signal monitoring system using RTL-SDR to detect unauthorized RF transmissions. Implemented signal analysis and anomaly detection techniques for identifying suspicious activity. Focused on authentication validation and spectrum monitoring for security applications.</div>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Anti-Drone System:</div>
-                                        <div class="resume-text">Built RF-based UAV detection using Raspberry Pi & HackRF with GPS geofencing and secure communication.</div>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Custom Port Scanner:</div>
-                                        <div class="resume-text">Coded async Python scanner with fingerprinting & report generation; matched Nmap >95% accuracy.</div>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Assisted Professor on college research project:</div>
-                                        <div class="resume-text">Contributed to development, testing, and documentation.</div>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Basic Port Scanner using Python:</div>
-                                        <div class="resume-text">Developed a Python script to scan for open ports on local and remote IP addresses using socket programming.</div>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <div class="resume-subsection-title">Wi-Fi Packet Sniffing with Wireshark:</div>
-                                        <div class="resume-text">Captured and analyzed wireless network traffic to identify network protocols and detect potential vulnerabilities.</div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Anti-Drone System:</div>
+                            <div class="resume-text">Built RF-based UAV detection using Raspberry Pi & HackRF with GPS geofencing and secure communication.</div>
                         </div>
-                    `;
-                    
-                    resumeContent.innerHTML = html;
-                })
-                .catch(error => {
-                    resumeContent.innerHTML = `<div style="color: #ff6b6b; padding: 2rem; text-align: center;">
-                        <p>Unable to load resume: ${error.message}</p>
-                        <p style="margin-top: 1rem;"><a href="resume.pdf" download="Resume.pdf">Download Resume (PDF)</a></p>
-                    </div>`;
-                });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        .resume-container {
-            min-height: 100vh;
-            background-color: var(--bg-main);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .resume-header {
-            background: rgba(5, 5, 5, 0.85);
-            backdrop-filter: blur(16px);
-            padding: 2rem 4rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .resume-title-section {
-            flex: 1;
-        }
-
-        .resume-terminal {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--accent-color);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .resume-title-section h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #fff;
-            margin: 0;
-            letter-spacing: -0.02em;
-        }
-
-        .resume-title-section p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin: 0.5rem 0 0 0;
-        }
-
-        .resume-actions {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .resume-actions a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            cursor: pointer;
-        }
-
-        .resume-actions a:hover {
-            color: var(--accent-color);
-        }
-
-        .resume-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 4rem;
-            background-color: var(--bg-main);
-        }
-
-        .resume-frame {
-            width: 100%;
-            max-width: 900px;
-            aspect-ratio: 8.5 / 11;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            background: #fff;
-        }
-
-        .resume-frame iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .resume-info {
-            background: rgba(0,255,136,0.05);
-            border: 1px solid rgba(0,255,136,0.2);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-align: center;
-        }
-
-        .resume-info p {
-            color: var(--text-secondary);
-            margin: 0;
-            font-size: 0.95rem;
-            flex: 1;
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .resume-header {
-                padding: 1.5rem 2rem;
-            }
-            .resume-content {
-                padding: 1.5rem 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .resume-header {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-                padding: 1.5rem 1rem;
-            }
-
-            .resume-title-section h1 {
-                font-size: 1.8rem;
-            }
-
-            .resume-actions {
-                justify-content: center;
-                width: 100%;
-            }
-
-            .resume-content {
-                padding: 1rem;
-            }
-
-            .resume-frame {
-                max-width: 100%;
-                aspect-ratio: auto;
-                min-height: 500px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .resume-header {
-                padding: 1rem;
-            }
-
-            .resume-title-section h1 {
-                font-size: 1.4rem;
-            }
-
-            .resume-terminal {
-                font-size: 0.75rem;
-            }
-
-            .resume-actions {
-                flex-direction: column;
-                gap: 0.75rem;
-                width: 100%;
-            }
-
-            .resume-actions a {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-                display: block;
-                text-align: center;
-            }
-
-            .resume-content {
-                padding: 0.5rem;
-            }
-
-            .resume-frame {
-                min-height: 400px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Background Effects -->
-    <div class="background-effects" id="bg-effects">
-        <div class="glow-1"></div>
-        <div class="glow-2"></div>
-        <div class="grid-overlay"></div>
-    </div>
-
-    <div class="resume-container">
-        <!-- Header -->
-        <div class="resume-header">
-            <div class="resume-title-section">
-                <div class="resume-terminal">root@system:~/resume</div>
-                <h1>Claims Jose Christoper</h1>
-                <p>Your resume in PDF format - view it directly without any authentication required.</p>
-            </div>
-            <div class="resume-actions">
-                <a href="index.html">Back Home</a>
-                <a href="resume.pdf" download="Claims_Jose_Christoper_Resume.pdf">Download PDF</a>
-            </div>
-        </div>
-
-        <!-- Content -->
-        <div class="resume-content">
-            <div style="width: 100%; max-width: 900px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-                <div class="resume-frame" id="resume-content" style="background: #fff; padding: 2.5rem; overflow-y: auto; font-family: 'Arial', sans-serif; color: #000; line-height: 1.6; min-height: 600px;">
-                    <!-- Resume content will be loaded here -->
-                    <div style="text-align: center; color: #888; padding: 2rem;">Loading resume...</div>
+                        
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Custom Port Scanner:</div>
+                            <div class="resume-text">Coded async Python scanner with fingerprinting & report generation; matched Nmap >95% accuracy.</div>
+                        </div>
+                        
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Assisted Professor on college research project:</div>
+                            <div class="resume-text">Contributed to development, testing, and documentation.</div>
+                        </div>
+                        
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Basic Port Scanner using Python:</div>
+                            <div class="resume-text">Developed a Python script to scan for open ports on local and remote IP addresses using socket programming.</div>
+                        </div>
+                        
+                        <div class="resume-subsection">
+                            <div class="resume-subsection-title">Wi-Fi Packet Sniffing with Wireshark:</div>
+                            <div class="resume-text">Captured and analyzed wireless network traffic to identify communication protocols and detect potential vulnerabilities.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const resumeContent = document.getElementById('resume-content');
-            
-            fetch('resume.pdf')
-                .then(response => response.text())
-                .then(text => {
-                    // Create professional resume layout
-                    const html = `
-                        <style>
-                            .resume-header { text-align: center; margin-bottom: 1.5rem; }
-                            .resume-name { font-size: 1.8rem; font-weight: bold; letter-spacing: 0.15em; margin: 0; color: #000; }
-                            .resume-title { font-size: 0.95rem; color: #333; margin: 0.25rem 0; }
-                            .resume-contact { font-size: 0.85rem; color: #0066cc; margin: 0.5rem 0 0 0; }
-                            .resume-contact a { color: #0066cc; text-decoration: none; margin: 0 0.25rem; }
-                            .resume-divider { border-bottom: 1px solid #ccc; margin: 1rem 0; }
-                            .resume-container { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem; }
-                            .resume-left, .resume-right { }
-                            .resume-section { margin-bottom: 1.5rem; }
-                            .resume-section-title { font-size: 0.85rem; font-weight: bold; letter-spacing: 0.1em; color: #000; margin-bottom: 0.75rem; border-bottom: 2px solid #000; padding-bottom: 0.5rem; }
-                            .resume-subsection { margin-bottom: 1rem; }
-                            .resume-subsection-title { font-size: 0.95rem; font-weight: bold; color: #000; margin: 0; }
-                            .resume-subsection-subtitle { font-size: 0.85rem; color: #555; margin: 0.1rem 0 0.3rem 0; }
-                            .resume-text { font-size: 0.85rem; line-height: 1.5; margin: 0.25rem 0; color: #333; }
-                            .resume-list { margin: 0.5rem 0 0 1.2rem; padding: 0; }
-                            .resume-list li { font-size: 0.85rem; margin: 0.3rem 0; color: #333; }
-                            .resume-skills { display: flex; flex-direction: column; }
-                            .resume-skills li { list-style: disc; margin-left: 1.2rem; color: #333; }
-                            a { color: #0066cc; text-decoration: none; }
-                            @media (max-width: 768px) {
-                                .resume-container { grid-template-columns: 1fr; gap: 1.5rem; }
-                            }
-                        </style>
-                        
-                        <div class="resume-header">
-                            <p class="resume-name">CLAIMS JOSE CHRISTOPER C</p>
-                            <p class="resume-title">Cybersecurity Engineering Student | Penetration Tester | SOC Analyst (Aspiring)</p>
-                            <p class="resume-contact">
-                                <a href="mailto:claimsjosechristoper@gmail.com">claimsjosechristoper@gmail.com</a> | 
-                                <a href="https://linkedin.com/in/claims-jose-christoper">linkedin.com/in/claims-jose-christoper</a> | 
-                                <a href="https://github.com/claimsjosechristoper">github.com/claimsjosechristoper</a>
-                            </p>
-                        </div>
-                        
-                        <div class="resume-divider"></div>
-                        
-                        <div class="resume-container">
-                            <!-- LEFT COLUMN -->
-                            <div class="resume-left">
-                                <!-- EDUCATION -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">EDUCATION</div>
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">SATHYABAMA UNIVERSITY</p>
-                                        <p class="resume-text">Bachelor of Engineering<br>Computer Science & Engineering<br>(Specialization: Cybersecurity)</p>
-                                        <p class="resume-text"><strong>2024 – Present (Currently 2nd Year)</strong><br>CGPA: 7.0 / 10<br>2024-2028</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- SKILLS -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">SKILLS</div>
-                                    <ul class="resume-list resume-skills">
-                                        <li>Penetration Testing</li>
-                                        <li>SOC Analysis</li>
-                                        <li>Packet Analysis</li>
-                                        <li>Python (Intermediate)</li>
-                                        <li>C Bash (Beginner)</li>
-                                    </ul>
-                                </div>
-                                
-                                <!-- CERTIFICATION -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">CERTIFICATION</div>
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Cyber Security 101</p>
-                                        <p class="resume-subsection-subtitle">TryHackMe 2026</p>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Pre Security Path</p>
-                                        <p class="resume-subsection-subtitle">TryHackMe 2025</p>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Python For Data Science</p>
-                                        <p class="resume-subsection-subtitle">freeCodeCamp 2025</p>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Python (Basic)</p>
-                                        <p class="resume-subsection-subtitle">HackerRank 2025</p>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Introduction to Cybersecurity</p>
-                                        <p class="resume-subsection-subtitle">Cisco Networking Academy 2025</p>
-                                    </div>
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Foundations of Cybersecurity</p>
-                                        <p class="resume-subsection-subtitle">Coursera (offered by Google) 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- RIGHT COLUMN -->
-                            <div class="resume-right">
-                                <!-- PROFESSIONAL SUMMARY -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">PROFESSIONAL SUMMARY</div>
-                                    <p class="resume-text">Motivated Cybersecurity Engineering student (2nd year) with hands-on experience in RF signal analysis, network monitoring, penetration testing, and incident response. Proficient with Wireshark, Kali Linux, Burp Suite, and Python scripting. Certified by Cisco, Google, and TryHackMe. Actively building real-world security tools including an RF Intrusion Detection System and an Anti-Drone defense platform. Seeking to contribute to a dynamic SOC or security engineering team.</p>
-                                </div>
-                                
-                                <!-- PROJECT EXPERIENCE -->
-                                <div class="resume-section">
-                                    <div class="resume-section-title">PROJECT EXPERIENCE</div>
-                                    
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">RF Intrusion Detection System (RF IDS):</p>
-                                        <p class="resume-text">Developed a real-time RF signal monitoring system using RTL-SDR to detect unauthorized RF transmissions. Implemented signal analysis and anomaly detection techniques for identifying suspicious activity. Focused on authentication validation and spectrum monitoring for security applications.</p>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Anti-Drone System:</p>
-                                        <p class="resume-text">Built RF-based UAV detection using Raspberry Pi & HackRF with GPS geofencing and secure communication.</p>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Custom Port Scanner:</p>
-                                        <p class="resume-text">Coded async Python scanner with fingerprinting & report generation; matched Nmap >95% accuracy.</p>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Assisted Professor on college research project:</p>
-                                        <p class="resume-text">Contributed to development, testing, and documentation.</p>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Basic Port Scanner using Python:</p>
-                                        <p class="resume-text">Developed a Python script to scan for open ports on local and remote IP addresses using socket programming.</p>
-                                    </div>
-                                    
-                                    <div class="resume-subsection">
-                                        <p class="resume-subsection-title">Wi-Fi Packet Sniffing with Wireshark:</p>
-                                        <p class="resume-text">Captured and analyzed wireless network traffic to identify network protocols and detect potential vulnerabilities.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    
-                    resumeContent.innerHTML = html;
-                })
-                .catch(error => {
-                    resumeContent.innerHTML = `<div style="color: #ff6b6b; padding: 2rem; text-align: center;">
-                        <p>Unable to load resume: ${error.message}</p>
-                        <p style="margin-top: 1rem;"><a href="resume.pdf" download="Resume.pdf" style="color: #00ff88; text-decoration: none;">Download Resume (PDF)</a></p>
-                    </div>`;
-                });
-        });
+        const downloadButton = document.getElementById('resume-download-btn');
+        let resumeObjectUrl = null;
+        window.__resumeDownloadReady = false;
+
+        fetch('resume.pdf')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to preload resume.pdf');
+                }
+
+                return response.blob();
+            })
+            .then((blob) => {
+                resumeObjectUrl = URL.createObjectURL(blob);
+                downloadButton.href = resumeObjectUrl;
+                window.__resumeDownloadReady = true;
+            })
+            .catch(() => {
+                resumeObjectUrl = null;
+                window.__resumeDownloadReady = false;
+            });
     </script>
+</body>
+</html>
