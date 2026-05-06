@@ -12,7 +12,11 @@ RUN echo 'server { \
     index index.html; \
     \
     location / { \
-        try_files $uri $uri/ /index.html; \
+        try_files $uri $uri/ @fallback; \
+    } \
+    \
+    location @fallback { \
+        rewrite ^.*$ /index.html break; \
     } \
 }' > /etc/nginx/conf.d/default.conf
 
